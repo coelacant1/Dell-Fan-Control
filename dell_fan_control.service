@@ -1,0 +1,11 @@
+[Unit]
+Description=Dell Server Fan Control based on CPU Temperatures
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /dellcontrol/Dell-Fan-Control/DellFanControl.py
+Restart=on-failure
+User=root
+
+[Install]
+WantedBy=multi-user.target
